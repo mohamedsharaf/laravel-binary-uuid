@@ -202,11 +202,6 @@ trait HasBinaryUuid
         return 'uuid';
     }
 
-    public function getIncrementing()
-    {
-        return false;
-    }
-
     public function resolveRouteBinding($value)
     {
         return $this->withUuid($value)->first();
